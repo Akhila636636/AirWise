@@ -1,0 +1,123 @@
+.wrapper {
+  position: relative;
+  width: 100%;
+  margin-bottom: var(--space-6);
+}
+
+.searchBar {
+  display: flex;
+  gap: var(--space-3);
+  align-items: center;
+}
+
+.inputContainer {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.searchIcon {
+  position: absolute;
+  left: var(--space-3);
+  color: var(--color-text-muted);
+  pointer-events: none;
+}
+
+.input {
+  width: 100%;
+  min-height: var(--touch-target);
+  padding: var(--space-2) var(--space-3) var(--space-2) calc(var(--space-8) + var(--space-1));
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: inherit;
+  font-size: var(--font-size-base);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.input:focus-visible {
+  outline: none;
+  border-color: var(--color-border-focus);
+  box-shadow: var(--focus-ring);
+}
+
+.locationBtn {
+  flex-shrink: 0;
+  font-size: var(--font-size-sm);
+  padding: 0 var(--space-3);
+}
+
+.dropdown {
+  position: absolute;
+  top: calc(100% + var(--space-1));
+  left: 0;
+  right: 0;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-lg);
+  max-height: 240px;
+  overflow-y: auto;
+  z-index: 50;
+  list-style: none;
+  padding: var(--space-1) 0;
+  margin: 0;
+}
+
+.dropdownItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-3) var(--space-4);
+  cursor: pointer;
+  font-size: var(--font-size-sm);
+  transition: background-color var(--transition-fast);
+}
+
+.dropdownItem:hover,
+.activeItem {
+  background-color: var(--color-bg-secondary);
+  color: var(--color-primary);
+}
+
+.cityName {
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.cityDetails {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-xs);
+}
+
+.geoStatus {
+  margin-top: var(--space-2);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.spinner {
+  position: absolute;
+  right: var(--space-3);
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--color-border);
+  border-top-color: var(--color-primary);
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 600px) {
+  .searchBar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

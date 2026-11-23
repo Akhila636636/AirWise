@@ -1,0 +1,163 @@
+.wrapper {
+  margin-bottom: var(--space-8);
+  border: 1px solid var(--color-border);
+}
+
+.header {
+  margin-bottom: var(--space-4);
+}
+
+.title {
+  margin: 0;
+  font-size: var(--font-size-xl);
+}
+
+.subtitle {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  margin-top: var(--space-1);
+}
+
+.controlsGrid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.controlItem {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.labelRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sliderLabel {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.sliderValue {
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.rangeInput {
+  width: 100%;
+  accent-color: var(--color-primary);
+  height: 6px;
+  cursor: pointer;
+}
+
+.toggleRow {
+  display: flex;
+  gap: var(--space-6);
+  flex-wrap: wrap;
+}
+
+.resultsBox {
+  background-color: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  padding: var(--space-4);
+}
+
+.metricCard {
+  margin-bottom: var(--space-4);
+}
+
+.metricTitle {
+  display: block;
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-2);
+}
+
+.comparisonBar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.barItem {
+  display: grid;
+  grid-template-columns: 60px 1fr 140px;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: var(--font-size-xs);
+}
+
+.barLabel {
+  font-weight: 600;
+}
+
+.barTrack {
+  height: 12px;
+  background-color: var(--color-border);
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.barBaseline {
+  height: 100%;
+  background-color: var(--color-error);
+  border-radius: 9999px;
+}
+
+.barCurrent {
+  height: 100%;
+  background-color: var(--color-primary);
+  border-radius: 9999px;
+  transition: width var(--transition-normal);
+}
+
+.barVal {
+  font-weight: 700;
+}
+
+.savedTag {
+  color: var(--color-primary);
+  margin-left: var(--space-1);
+}
+
+.statsRow {
+  display: flex;
+  gap: var(--space-4);
+  border-top: 1px dashed var(--color-border);
+  padding-top: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.statPill {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.statLabel {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+}
+
+.statNumber {
+  font-size: var(--font-size-base);
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+@media (max-width: 600px) {
+  .barItem {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+}

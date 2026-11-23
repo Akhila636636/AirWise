@@ -1,0 +1,217 @@
+.wrapper {
+  margin-bottom: var(--space-8);
+}
+
+.header {
+  margin-bottom: var(--space-4);
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.mainTitle {
+  margin: 0;
+  font-size: var(--font-size-3xl);
+}
+
+.badgeLlm {
+  background-color: var(--color-primary-light);
+  color: var(--color-primary-dark);
+  border: 1px solid var(--color-primary);
+}
+
+.badgeRules {
+  background-color: var(--color-bg-tertiary);
+  color: var(--color-text-secondary);
+  border: 1px solid var(--color-border);
+}
+
+.simpleToggleBtn {
+  font-size: var(--font-size-xs);
+  margin-left: auto;
+  min-height: 36px;
+  padding: 0 var(--space-3);
+}
+
+.summaryText {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-base);
+  margin-top: var(--space-2);
+  line-height: 1.5;
+}
+
+.timeOfDayBanner {
+  background-color: var(--color-bg-secondary);
+  border-left: 4px solid var(--color-primary);
+  border-radius: var(--border-radius);
+  padding: var(--space-3) var(--space-4);
+  margin-bottom: var(--space-6);
+  font-size: var(--font-size-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.timeTag {
+  font-weight: 700;
+  color: var(--color-primary);
+  font-size: var(--font-size-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.timeAdvice {
+  color: var(--color-text);
+  line-height: 1.4;
+}
+
+.filterBar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.filterLabel {
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-secondary);
+}
+
+.filterButtons {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.filterBtn {
+  font-size: var(--font-size-xs);
+  padding: 0 var(--space-3);
+  min-height: 34px;
+}
+
+.freeBudgetCallout {
+  background-color: var(--color-success-bg);
+  border: 1px solid var(--color-success);
+  border-radius: var(--border-radius);
+  padding: var(--space-3) var(--space-4);
+  margin-bottom: var(--space-6);
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
+}
+
+.simpleModeContainer {
+  background-color: var(--color-bg-secondary);
+  border: 2px solid var(--color-primary);
+  border-radius: var(--border-radius-lg);
+  padding: var(--space-6);
+  margin-bottom: var(--space-6);
+}
+
+.simpleModeHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+
+.simpleIcon {
+  font-size: 1.8rem;
+}
+
+.simpleTitle {
+  font-size: var(--font-size-2xl);
+  font-weight: 800;
+  margin: 0;
+  color: var(--color-text);
+}
+
+.simpleCardsList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.simpleCard {
+  display: flex;
+  gap: var(--space-4);
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  padding: var(--space-4);
+  align-items: flex-start;
+}
+
+.simpleCardRank {
+  font-size: var(--font-size-2xl);
+  font-weight: 800;
+  color: var(--color-primary);
+  line-height: 1;
+}
+
+.simpleActionTitle {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  margin: 0 0 var(--space-1) 0;
+  color: var(--color-text);
+}
+
+.simpleActionReason {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.section {
+  margin-bottom: var(--space-8);
+}
+
+.sectionTitle {
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--space-4);
+  padding-bottom: var(--space-2);
+  border-bottom: 2px solid var(--color-border);
+}
+
+.subSection {
+  margin-bottom: var(--space-4);
+}
+
+.subTitle {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-2);
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-4);
+}
+
+.notMedicalNotice {
+  background-color: var(--color-warning-bg);
+  border: 1px solid var(--color-warning);
+  border-radius: var(--border-radius);
+  padding: var(--space-3) var(--space-4);
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
+  margin-top: var(--space-4);
+}
+
+@media (max-width: 600px) {
+  .simpleToggleBtn {
+    margin-left: 0;
+    width: 100%;
+  }
+}

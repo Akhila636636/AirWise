@@ -1,0 +1,153 @@
+.wrapper {
+  margin-bottom: var(--space-8);
+  border: 1px solid var(--color-border);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.onlineDot {
+  width: 10px;
+  height: 10px;
+  background-color: var(--color-success);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.title {
+  margin: 0;
+  font-size: var(--font-size-lg);
+}
+
+.toggleBtn {
+  font-size: var(--font-size-xs);
+  min-height: 36px;
+  padding: 0 var(--space-3);
+}
+
+.chatDrawer {
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--space-4);
+  margin-top: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.messageBox {
+  max-height: 320px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-2);
+  background-color: var(--color-bg-secondary);
+  border-radius: var(--border-radius);
+}
+
+.messageBubble {
+  max-width: 85%;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--border-radius);
+  font-size: var(--font-size-sm);
+  line-height: 1.45;
+}
+
+.userBubble {
+  align-self: flex-end;
+  background-color: var(--color-primary);
+  color: #ffffff;
+}
+
+.userBubble .bubbleAuthor {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.assistantBubble {
+  align-self: flex-start;
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+}
+
+.bubbleAuthor {
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  margin-bottom: 2px;
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.sourceTag {
+  font-weight: 400;
+  font-size: 0.65rem;
+  opacity: 0.75;
+}
+
+.bubbleText {
+  white-space: pre-wrap;
+}
+
+.chipsRow {
+  display: flex;
+  gap: var(--space-2);
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.chipBtn {
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: 9999px;
+  padding: 4px 10px;
+  font-size: var(--font-size-xs);
+  color: var(--color-text);
+  white-space: nowrap;
+  cursor: pointer;
+  transition: border-color var(--transition-fast), background var(--transition-fast);
+}
+
+.chipBtn:hover:not(:disabled) {
+  border-color: var(--color-primary);
+  background: var(--color-primary-light);
+}
+
+.inputBar {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.input {
+  flex: 1;
+  min-height: 40px;
+  padding: 0 var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: inherit;
+  font-size: var(--font-size-sm);
+}
+
+.input:focus-visible {
+  outline: none;
+  border-color: var(--color-border-focus);
+  box-shadow: var(--focus-ring);
+}
+
+.medicalNotice {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  text-align: center;
+  margin: 0;
+}

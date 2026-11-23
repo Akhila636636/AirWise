@@ -1,0 +1,152 @@
+.wrapper {
+  margin-bottom: var(--space-8);
+  border: 1px solid var(--color-border);
+  background-color: var(--color-bg);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--space-4);
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.badge {
+  display: inline-block;
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  letter-spacing: 0.05em;
+  margin-bottom: 2px;
+}
+
+.title {
+  margin: 0;
+  font-size: var(--font-size-xl);
+}
+
+.toggleBtn {
+  font-size: var(--font-size-xs);
+  min-height: 36px;
+  padding: 0 var(--space-3);
+}
+
+.topThreeList {
+  background-color: var(--color-bg-secondary);
+  border-radius: var(--border-radius);
+  padding: var(--space-3) var(--space-4);
+  margin-bottom: var(--space-3);
+}
+
+.topThreeHeader {
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
+  margin-bottom: var(--space-2);
+}
+
+.priorityList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.priorityItem {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  padding: var(--space-2) var(--space-3);
+}
+
+.itemHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: 2px;
+}
+
+.itemRank {
+  font-weight: 800;
+  color: var(--color-primary);
+  font-size: var(--font-size-sm);
+}
+
+.actionName {
+  font-weight: 700;
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
+  flex: 1;
+}
+
+.scorePill {
+  font-size: var(--font-size-xs);
+  background: var(--color-primary-light);
+  color: var(--color-primary-dark);
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 9999px;
+}
+
+.itemReason {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  margin: 0;
+  line-height: 1.4;
+}
+
+.detailsContent {
+  border-top: 1px dashed var(--color-border);
+  padding-top: var(--space-4);
+  margin-top: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.formulaBox {
+  background-color: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  padding: var(--space-3);
+}
+
+.boxLabel {
+  display: block;
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-1);
+}
+
+.formulaBox code {
+  font-family: monospace;
+  font-size: var(--font-size-xs);
+  color: var(--color-primary);
+  word-break: break-word;
+}
+
+.bulletList,
+.excludedList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: var(--font-size-xs);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.excludedItem {
+  color: var(--color-text-secondary);
+}
+
+.excludedReason {
+  color: var(--color-error);
+}

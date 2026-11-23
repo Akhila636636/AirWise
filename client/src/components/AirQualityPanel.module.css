@@ -1,0 +1,232 @@
+.panel {
+  margin-bottom: var(--space-8);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--space-4);
+  gap: var(--space-4);
+}
+
+.title {
+  margin: 0;
+  font-size: var(--font-size-2xl);
+}
+
+.subtitle {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  margin-top: var(--space-1);
+}
+
+.manualToggleBtn {
+  font-size: var(--font-size-xs);
+  padding: 0 var(--space-3);
+  min-height: 36px;
+}
+
+.manualSliderBox {
+  background: var(--color-bg-secondary);
+  border: 1px dashed var(--color-border);
+  border-radius: var(--border-radius);
+  padding: var(--space-4);
+  margin-bottom: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.sliderLabel {
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
+}
+
+.rangeInput {
+  width: 100%;
+  accent-color: var(--color-primary);
+  height: 6px;
+  cursor: pointer;
+}
+
+.heroBanner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-4) var(--space-6);
+  border-left: 6px solid;
+  border-radius: var(--border-radius);
+  margin-bottom: var(--space-6);
+  background-color: var(--color-bg-secondary);
+}
+
+.aqiMetric {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-4);
+}
+
+.aqiNumber {
+  font-size: var(--font-size-4xl);
+  font-weight: 800;
+  line-height: 1;
+}
+
+.aqiMeta {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.aqiUnit {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+
+.categoryBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: 0.25rem 0.6rem;
+  border-radius: 9999px;
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.pollutants {
+  display: flex;
+  gap: var(--space-4);
+}
+
+.pollutantCard {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  padding: var(--space-2) var(--space-4);
+  text-align: center;
+}
+
+.pollutantLabel {
+  display: block;
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  font-weight: 600;
+}
+
+.pollutantValue {
+  display: block;
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.pollutantUnit {
+  font-size: var(--font-size-xs);
+  font-weight: 400;
+  color: var(--color-text-secondary);
+}
+
+.windowsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.windowCard {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-border);
+}
+
+.bestWindow {
+  background-color: var(--color-success-bg);
+  border-color: var(--color-success);
+}
+
+.worstWindow {
+  background-color: var(--color-warning-bg);
+  border-color: var(--color-warning);
+}
+
+.windowIcon {
+  font-size: 1.5rem;
+}
+
+.windowTitle {
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+}
+
+.windowTime {
+  font-size: var(--font-size-base);
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.chartSection {
+  margin-top: var(--space-6);
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--space-4);
+}
+
+.chartHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-3);
+}
+
+.chartTitle {
+  font-size: var(--font-size-lg);
+  margin: 0;
+}
+
+.toggleTableBtn {
+  font-size: var(--font-size-xs);
+  padding: 0 var(--space-3);
+  min-height: 36px;
+}
+
+.tableWrapper {
+  overflow-x: auto;
+  max-height: 260px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--font-size-sm);
+}
+
+.table th,
+.table td {
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-border);
+  text-align: left;
+}
+
+.table th {
+  background-color: var(--color-bg-secondary);
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .heroBanner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-4);
+  }
+  .windowsGrid {
+    grid-template-columns: 1fr;
+  }
+}
