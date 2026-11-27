@@ -2,6 +2,7 @@ import { describe, it, expect, vi, beforeEach } from 'vitest';
 import request from 'supertest';
 import { createApp } from '../app.js';
 import { getFallbackAnswer, getContextualQuestions } from '../services/chatService.js';
+import { buildChatUserContext } from '../prompts/chat.js';
 import type { HouseholdProfile, AirQualitySummary } from '@airwise/shared';
 
 const mockProfile: HouseholdProfile = {
@@ -52,6 +53,39 @@ const mockAir: AirQualitySummary = {
 describe('Ask AirWise Chat Service & API', () => {
   beforeEach(() => {
     vi.restoreAllMocks();
+  });
+
+  it('builds chat context from the household profile and air quality summary', () => {
+    const context = JSON.parse(buildChatUserContext(mockProfile, mockAir));
+
+    expect(context).toEqual({
+      locationAir: {
+        aqi: 270,
+        category: 'Very Unhealthy',
+        pm25: 220,
+        pm10: 320,
+        bestVentilationWindow: '1:00 PM - 3:00 PM',
+        worstOutdoorWindow: '7:00 AM - 9:00 AM',
+      },
+      household: {
+        householdSize: 4,
+        hasChildren: true,
+        hasElderly: false,
+        hasSensitiveMembers: false,
+        commuteMode: 'metro',
+        cookingFuel: 'biomass',
+        hasAirPurifier: false,
+        homeType: 'apartment',
+        language: 'en',
+      },
+      planSummary: 'Standard winter smog harm-reduction plan',
+    });
+  });
+
+  it('includes a supplied plan summary in chat context', () => {
+    const context = JSON.parse(buildChatUserContext(mockProfile, mockAir, 'Custom plan'));
+
+    expect(context.planSummary).toBe('Custom plan');
   });
 
   it('generates contextual question chips based on profile', () => {
